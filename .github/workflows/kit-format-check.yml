@@ -1,0 +1,22 @@
+name: Kit format check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check selected kit formatting
+        run: >-
+          npx --yes prettier@3.9.10 --check --end-of-line auto
+          README.md
+          .github/agents/qa-director.agent.md
+          .github/workflows/kit-format-check.yml
