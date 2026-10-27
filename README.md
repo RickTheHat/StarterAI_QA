@@ -26,6 +26,10 @@ You need, in the project you are testing:
 4. **The app running somewhere you can reach**, for example `http://localhost:3000`.
    Tell the Director that URL in your first message. The agents will not start the app.
 
+If the app you are testing is not a Node.js project (for example .NET, Java, or Python),
+keep the Playwright tests in a small separate Node.js repo pointed at the app's URL, and
+install the kit into that repo instead.
+
 ## Install (one time per project)
 
 Clone this repo once. Then, from the root of the project you are testing, copy the kit in:
@@ -43,6 +47,12 @@ If your project already has a `.github` folder, the copy adds to it and changes 
 Close and reopen the project in VS Code. Open Copilot Chat, open the agent picker (the
 dropdown that says "Agent"), and choose **qa-director**. It is the only agent you can
 pick; the rest are hidden and the Director calls them.
+
+**Updating:** pull this repo and run the same copy command again. It overwrites the
+agents and touches nothing else. Check the version line at the top of this file.
+
+**Do not edit the copied agent files** in your project. If something should change, open
+an issue on this repo so every tester gets the same fix.
 
 ## First conversation
 
@@ -85,6 +95,9 @@ Nothing is written or executed without your yes. Silence is not approval.
 - No production data, no destructive actions, no secrets in output.
 - No arbitrary waits, retry-masking, or swallowed errors in tests.
 - No install, config, dependency, or application-code changes. Those are yours.
+
+VS Code asks you to approve each terminal command the Runner wants to run. Keep that on.
+Do not enable auto-approve for terminal commands.
 
 ## Filing a bug
 
