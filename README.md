@@ -1,6 +1,6 @@
 # StarterAI QA
 
-**Version 0.1.0** (2026-10-26). Maintainer: <your name>. Problems or ideas: open an issue on this repo.
+**Version 0.1.0** (2026-10-26). Maintainer: Richard J Graner III. Problems or ideas: open an issue on this repo.
 
 A small team of AI agents that help a human QA tester plan, write, run, and review
 Playwright tests on any project.
