@@ -5,8 +5,7 @@
 A small team of AI agents that help a human QA tester plan, write, run, and review
 Playwright tests on any project.
 
-You talk to one agent, the **QA Director**. It
-coordinates the others and asks you for approval before anything is written or run.
+You talk to one agent, the **QA Director**. It coordinates the others and asks you for approval before anything is written or run.
 
 These are [VS Code / GitHub Copilot custom agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
 (`.agent.md` files). They do nothing on their own; VS Code loads them from a fixed folder.
@@ -36,8 +35,9 @@ cp -R /path/to/StarterAI_QA/.github .
 ```
 
 That is the whole install. Everything in this kit lives inside one hidden folder named
-`.github`, because that is the only place VS Code looks for custom agents. The folder is
-hidden in Finder, which is why you copy it with the command rather than by dragging.
+`.github`, because that is where VS Code looks for a project's custom agents. The folder
+is hidden in Finder and File Explorer, which is why you copy it with the command rather
+than by dragging. On Windows, run the command in PowerShell.
 If your project already has a `.github` folder, the copy adds to it and changes nothing else.
 
 Close and reopen the project in VS Code. Open Copilot Chat, open the agent picker (the
